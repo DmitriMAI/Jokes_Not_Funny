@@ -1,8 +1,7 @@
-from aiogram import types
+from .gen import dp
+from .hello import dp
+from .help import dp
+from .start import dp
+from .error import dp
 
-from loader import dp
-
-
-@dp.message_handler()
-async def command_start(message: types.Message):
-    await message.answer(f'Команда {message.text} не найдена')
+__all__ = ['dp']
