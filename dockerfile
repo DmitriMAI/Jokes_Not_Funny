@@ -15,3 +15,7 @@ RUN pip install transformers tensorflow
 RUN pip install python-dotenv
 
 RUN pip install kafka-python
+
+ADD https://dlcdn.apache.org/kafka/3.3.1/kafka_2.13-3.3.1.tgz ./
+
+RUN tar -xzf kafka_2.13-3.3.1.tgz
